@@ -8,6 +8,7 @@ addons:
     packages:
       - chefdk
 
+
 # Don't `bundle install` which takes about 1.5 mins
 install: echo "skip bundle install"
 
@@ -35,5 +36,6 @@ matrix:
   include:
     - script:
       - chef exec delivery local unit
-      - kitchen verify
+      - chef exec delivery local syntax
+      - chef exec delivery local smoke
       env: UNIT_AND_LINT=1
