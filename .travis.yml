@@ -37,5 +37,7 @@ matrix:
     - script:
       - chef exec delivery local unit
       - chef exec delivery local syntax
+      - chef exec delivery local provision
+      - chef exec delivery local deploy
       - chef exec delivery local smoke
       env: UNIT_AND_LINT=1
