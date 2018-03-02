@@ -35,4 +35,5 @@ matrix:
   include:
     - script:
       - chef exec delivery local unit
+      - kitchen verify
       env: UNIT_AND_LINT=1
