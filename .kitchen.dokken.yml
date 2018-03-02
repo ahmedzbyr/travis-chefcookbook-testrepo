@@ -1,0 +1,18 @@
+driver:
+  name: dokken
+  privileged: true
+  chef_version: <%= ENV['CHEF_VERSION'] || 'current' %>
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+  deprecations_as_errors: true
+
+platforms:
+
+- name: centos-6
+  driver:
+    image: dokken/centos-6
+    pid_one_command: /sbin/init
