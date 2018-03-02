@@ -34,5 +34,5 @@ script: KITCHEN_LOCAL_YAML=.kitchen.dokken.yml kitchen verify ${INSTANCE}
 matrix:
   include:
     - script:
-      - chef exec delivery local all
+      - chef exec delivery local unit
       env: UNIT_AND_LINT=1
